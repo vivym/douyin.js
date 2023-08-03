@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/vivym/douyin.js#readme",
   "dependencies": {
+    "@fastify/type-provider-typebox": "^3.4.0",
+    "@sinclair/typebox": "^0.30.2",
     "axios": "^1.4.0",
     "fastify": "^4.21.0"
   },

@@ -1,7 +1,9 @@
 import fastify from 'fastify'
+import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox'
+
 import { plugin } from './libs/douyin'
 
-const server = fastify()
+const server = fastify().withTypeProvider<TypeBoxTypeProvider>()
 
 server.register(plugin)
 
