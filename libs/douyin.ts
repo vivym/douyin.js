@@ -15,10 +15,7 @@ export const RequestXBogusBody = Type.Object({
 export type RequestXBogusBodyType = Static<typeof RequestXBogusBody>
 
 const XBogusReply = Type.Object({
-  200: Type.Object({
-    token: Type.String(),
-  }),
-  '4xx': ErrorReply,
+  token: Type.String(),
 })
 export type XBogusReplyType = Static<typeof XBogusReply>
 
@@ -33,7 +30,10 @@ export const plugin: FastifyPluginAsync = async (fastify, opts) => {
 
   fastify.post<{
     Body: RequestXBogusBodyType,
-    Reply: XBogusReplyType,
+    Reply: {
+      200: XBogusReplyType,
+      '4xx': ErrorReplyType,
+    },
   }>('/token/x-bogus', { schema: requestXBogusSchema }, async (request, reply) => {
     const { payload, userAgent } = request.body
 
