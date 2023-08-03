@@ -1,0 +1,31 @@
+{
+  "name": "douyin.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivym/douyin.js.git"
+  },
+  "keywords": [
+    "Douyin"
+  ],
+  "author": "Ming Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivym/douyin.js/issues"
+  },
+  "homepage": "https://github.com/vivym/douyin.js#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "fastify": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.6",
+    "typescript": "^5.1.6"
+  }
+}
